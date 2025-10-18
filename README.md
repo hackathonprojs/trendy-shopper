@@ -15,9 +15,12 @@ A simple agent that looks at current Google Trends and finds products that fit t
 - An OpenAI API key
 
 ## Setup
-1. Install dependencies:
+1. Create and activate a virtual environment with uv, then install dependencies:
 ```bash
-pip install -r requirements.txt
+uv venv --python 3.12
+source .venv/bin/activate
+uv pip install browser-use
+uvx playwright install chromium --with-deps
 ```
 2. Create `.env` with your OpenAI key:
 ```bash
